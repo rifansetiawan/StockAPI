@@ -26,12 +26,12 @@ func (h *stockHandler) StockInput(c *gin.Context) {
 		return
 	}
 	newStock, err := h.stockService.InsertStock(input)
-	if true {
-		response := helper.APIResponse("Stock not added", http.StatusBadRequest, "error", nil)
+	// if true {
+	// 	response := helper.APIResponse("Stock not added", http.StatusBadRequest, "error", nil)
 
-		c.JSON(http.StatusBadRequest, response)
-		return
-	}
+	// 	c.JSON(http.StatusBadRequest, response)
+	// 	return
+	// }
 	formatter := stock.FormatStock(newStock)
 
 	response := helper.APIResponse("Stock has been added", http.StatusOK, "success", formatter)
