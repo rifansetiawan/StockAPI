@@ -1,5 +1,7 @@
 package stock
 
+import "github.com/google/uuid"
+
 type Service interface {
 	InsertStock(input StockInput) (Stock, error)
 }
@@ -14,6 +16,7 @@ func NewService(repository Repository) *service {
 
 func (s *service) InsertStock(input StockInput) (Stock, error) {
 	stock := Stock{}
+	stock.UUID = uuid.New().String()
 	stock.Code = input.Code
 	stock.Name = input.Name
 	stock.Open = input.Open
