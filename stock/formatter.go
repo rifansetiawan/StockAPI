@@ -1,15 +1,18 @@
 package stock
 
+import "time"
+
 type StockFormatter struct {
-	UUID        string  `json:"uuid"`
-	Name        string  `json:"name"`
-	Code        string  `json:"code"`
-	Price       float64 `json:"price"`
-	Open        float64 `json:"open"`
-	High        float64 `json:"high"`
-	Low         float64 `json:"low"`
-	Vol         float64 `json:"vol"`
-	ChangeValue float64 `json:"change_value"`
+	UUID        string    `json:"uuid"`
+	Name        string    `json:"name"`
+	Code        string    `json:"code"`
+	Price       float64   `json:"price"`
+	Open        float64   `json:"open"`
+	High        float64   `json:"high"`
+	Low         float64   `json:"low"`
+	Vol         float64   `json:"vol"`
+	Date        time.Time `json:"date"`
+	ChangeValue float64   `json:"change_value"`
 }
 
 func FormatStock(stock Stock) StockFormatter {
