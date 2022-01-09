@@ -27,5 +27,5 @@ func main() {
 
 	api.POST("/stocks", stockHandler.StockInput)
 
-	router.Run(":3000")
+	router.Run()
 }
