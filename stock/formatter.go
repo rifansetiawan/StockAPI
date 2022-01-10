@@ -24,6 +24,7 @@ func FormatStock(stock Stock) StockFormatter {
 		Low:         stock.Low,
 		Vol:         stock.Vol,
 		ChangeValue: stock.ChangeValue,
+		TimeStamp:   stock.TimeStamp,
 	}
 
 	return formatter
