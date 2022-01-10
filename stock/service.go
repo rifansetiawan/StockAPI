@@ -24,6 +24,7 @@ func (s *service) InsertStock(input StockInput) (Stock, error) {
 	stock.Low = input.Low
 	stock.Price = input.Price
 	stock.Vol = input.Vol
+	stock.TimeStamp = input.TimeStamp
 	stock.ChangeValue = input.ChangeValue
 
 	newStock, err := s.repository.Save(stock)

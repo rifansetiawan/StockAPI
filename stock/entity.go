@@ -12,7 +12,7 @@ type Stock struct {
 	Low         float64
 	Vol         string
 	ChangeValue float64
-	Date        string
+	TimeStamp   string
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
 }
