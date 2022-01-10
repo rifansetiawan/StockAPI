@@ -10,7 +10,7 @@ type StockFormatter struct {
 	Low         float64 `json:"low"`
 	Vol         string  `json:"vol"`
 	TimeStamp   string  `json:"timestamp"`
-	ChangeValue float64 `json:"change_value"`
+	ChangeValue float64 `json:"change"`
 }
 
 func FormatStock(stock Stock) StockFormatter {
