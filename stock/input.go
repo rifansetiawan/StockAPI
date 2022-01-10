@@ -8,6 +8,6 @@ type StockInput struct {
 	High      float64 `json:"high" binding:"required"`
 	Low       float64 `json:"low" binding:"required"`
 	Vol       string  `json:"vol" binding:"required"`
-	change    float64 `json:"change" binding:"required"`
+	Change    float64 `json:"change" binding:"required"`
 	TimeStamp string  `json:"time_stamp"`
 }
