@@ -9,7 +9,7 @@ type StockFormatter struct {
 	High        float64 `json:"high"`
 	Low         float64 `json:"low"`
 	Vol         string  `json:"vol"`
-	Date        string  `json:"date"`
+	Date        string  `json:"timestamp"`
 	ChangeValue float64 `json:"change_value"`
 }
 
