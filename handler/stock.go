@@ -22,7 +22,7 @@ func (h *stockHandler) StockInput(c *gin.Context) {
 
 	err := c.ShouldBindJSON(&input)
 	if err != nil {
-		response := helper.APIResponse("Stock not added", http.StatusBadRequest, "error", nil)
+		response := helper.APIResponse(err.Error(), http.StatusBadRequest, "error", nil)
 		c.JSON(http.StatusBadRequest, response)
 		fmt.Println(err)
 		return
