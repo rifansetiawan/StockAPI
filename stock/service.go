@@ -1,6 +1,10 @@
 package stock
 
-import "github.com/google/uuid"
+import (
+	"fmt"
+
+	"github.com/google/uuid"
+)
 
 type Service interface {
 	InsertStock(input StockInput) (Stock, error)
@@ -28,6 +32,7 @@ func (s *service) InsertStock(input StockInput) (Stock, error) {
 	stock.ChangeValue = input.ChangeValue
 
 	newStock, err := s.repository.Save(stock)
+	fmt.Println(stock)
 
 	if err != nil {
 		return newStock, err
