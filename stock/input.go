@@ -9,5 +9,5 @@ type StockInput struct {
 	Low         float64 `json:"low" binding:"required"`
 	Vol         string  `json:"vol" binding:"required"`
 	ChangeValue float64 `json:"change" binding:"required"`
-	Date        string  `json:"dattimestampe" binding:"required"`
+	TimeStamp   string  `json:"dattimestampe" binding:"required"`
 }
