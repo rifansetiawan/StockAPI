@@ -3,6 +3,7 @@ package handler
 import (
 	"bwastartup/helper"
 	"bwastartup/stock"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -23,6 +24,7 @@ func (h *stockHandler) StockInput(c *gin.Context) {
 	if err != nil {
 		response := helper.APIResponse("Stock not added", http.StatusBadRequest, "error", nil)
 		c.JSON(http.StatusBadRequest, response)
+		fmt.Println(err)
 		return
 	}
 	newStock, err := h.stockService.InsertStock(input)
