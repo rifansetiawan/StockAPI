@@ -29,7 +29,7 @@ func (s *service) InsertStock(input StockInput) (Stock, error) {
 	stock.Price = input.Price
 	stock.Vol = input.Vol
 	stock.TimeStamp = input.TimeStamp
-	stock.ChangeValue = input.ChangeValue
+	stock.change = input.change
 
 	newStock, err := s.repository.Save(stock)
 	fmt.Println(stock)
