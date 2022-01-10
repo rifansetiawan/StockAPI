@@ -10,9 +10,9 @@ type Stock struct {
 	Open        float64
 	High        float64
 	Low         float64
-	Vol         float64
+	Vol         string
 	ChangeValue float64
-	Date        time.Time
+	Date        string
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
 }
